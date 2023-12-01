@@ -55,6 +55,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    scroll-behavior: smooth;
 }
 /* ! design */
 html{
@@ -1893,13 +1894,17 @@ footer a{
     }
     #outstanding{
         grid-template-columns: 1fr;
-        grid-template-rows: 100px repeat(5, 1fr);
+        grid-template-rows: 100px repeat(5, auto);
+        padding-bottom: 0;
     }
     #outstanding h2:nth-child(1){
         grid-area: 1 / 1 / 2 / 2;
         margin: 0;
         text-align: center;
         color: var(--main-letters-color);
+    }
+    #outstanding article figure img{
+        object-fit: cover;
     }
     #outstanding article:nth-child(2){
         grid-area: 2 / 1 / 3 / 2;
@@ -1918,6 +1923,10 @@ footer a{
     }
     #subs{
         width: 85%;
+    }
+    #subs p{
+        text-align: justify;
+        font-size: 0.625em;
     }
     #news{
         display: none;
